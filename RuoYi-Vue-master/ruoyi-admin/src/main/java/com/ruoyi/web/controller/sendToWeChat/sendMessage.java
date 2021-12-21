@@ -23,13 +23,14 @@ import java.util.Map;
 *
 *
 **/
-@Api("企业微信推送消息")
+//@Api("企业微信推送消息")
 @RestController
 @Slf4j
 public class sendMessage {
     /** 
      *发送订阅消息
      */
+    //@ApiOperation("小程序发消息")
     @GetMapping("/push")
     public String push(String openid,Map<String, TemplateData> m,String s) { //,List<String> text
         RestTemplate restTemplate = new RestTemplate();
@@ -48,7 +49,7 @@ public class sendMessage {
     /**
      *获取AccessToken
      */
-    @ApiOperation("小程序获取accesstoken")
+    //@ApiOperation("小程序获取accesstoken")
     @GetMapping("/getAccessToken")
     public String getAccessToken() {
         RestTemplate restTemplate = new RestTemplate();
